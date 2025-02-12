@@ -54,6 +54,131 @@ class AppLocalizations {
   static AppLocalizations? maybeOf(BuildContext context) {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
+
+  /// `Available`
+  String get availableToWork {
+    return Intl.message(
+      'Available',
+      name: 'availableToWork',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Software Developer`
+  String get occupation {
+    return Intl.message(
+      'Software Developer',
+      name: 'occupation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `As a `
+  String get introduction_como {
+    return Intl.message('As a ', name: 'introduction_como', desc: '', args: []);
+  }
+
+  /// `software developer `
+  String get introduction_desarrollador {
+    return Intl.message(
+      'software developer ',
+      name: 'introduction_desarrollador',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `my passion is to create `
+  String get introduction_pasion {
+    return Intl.message(
+      'my passion is to create ',
+      name: 'introduction_pasion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `innovative applications `
+  String get introduction_aplicaciones {
+    return Intl.message(
+      'innovative applications ',
+      name: 'introduction_aplicaciones',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `that make a difference.\nMy experience in `
+  String get introduction_diferencia {
+    return Intl.message(
+      'that make a difference.\nMy experience in ',
+      name: 'introduction_diferencia',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `cross-platform development `
+  String get introduction_multiplataforma {
+    return Intl.message(
+      'cross-platform development ',
+      name: 'introduction_multiplataforma',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `allows me to create complete solutions. I am a `
+  String get introduction_soluciones {
+    return Intl.message(
+      'allows me to create complete solutions. I am a ',
+      name: 'introduction_soluciones',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `curious and proactive person, `
+  String get introduction_curiosa {
+    return Intl.message(
+      'curious and proactive person, ',
+      name: 'introduction_curiosa',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `always looking for `
+  String get introduction_buscando {
+    return Intl.message(
+      'always looking for ',
+      name: 'introduction_buscando',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `new challenges `
+  String get introduction_desafios {
+    return Intl.message(
+      'new challenges ',
+      name: 'introduction_desafios',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `that allow me to continue growing in the world of development.`
+  String get introduction_creciendo {
+    return Intl.message(
+      'that allow me to continue growing in the world of development.',
+      name: 'introduction_creciendo',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

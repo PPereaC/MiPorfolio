@@ -1,3 +1,15 @@
 {
-    
+  "availableToWork": "Disponible",
+  "occupation" : "Desarrollador de Software",
+  "introduction_como": "Como ",
+  "introduction_desarrollador": "desarrollador de software ",
+  "introduction_pasion": "mi pasión es crear ",
+  "introduction_aplicaciones": "aplicaciones innovadoras ",
+  "introduction_diferencia": "que marquen la diferencia.\nMi experiencia en ",
+  "introduction_multiplataforma": "desarrollo multiplataforma ",
+  "introduction_soluciones": "me permite crear soluciones completas. Soy una persona ",
+  "introduction_curiosa": "curiosa y proactiva, ",
+  "introduction_buscando": "siempre buscando ",
+  "introduction_desafios": "nuevos desafíos ",
+  "introduction_creciendo": "que me permitan seguir creciendo en el mundo del desarrollo."
 }

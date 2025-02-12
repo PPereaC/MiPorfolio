@@ -21,5 +21,41 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'es';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "availableToWork": MessageLookupByLibrary.simpleMessage("Disponible"),
+    "introduction_aplicaciones": MessageLookupByLibrary.simpleMessage(
+      "aplicaciones innovadoras ",
+    ),
+    "introduction_buscando": MessageLookupByLibrary.simpleMessage(
+      "siempre buscando ",
+    ),
+    "introduction_como": MessageLookupByLibrary.simpleMessage("Como "),
+    "introduction_creciendo": MessageLookupByLibrary.simpleMessage(
+      "que me permitan seguir creciendo en el mundo del desarrollo.",
+    ),
+    "introduction_curiosa": MessageLookupByLibrary.simpleMessage(
+      "curiosa y proactiva, ",
+    ),
+    "introduction_desafios": MessageLookupByLibrary.simpleMessage(
+      "nuevos desafíos ",
+    ),
+    "introduction_desarrollador": MessageLookupByLibrary.simpleMessage(
+      "desarrollador de software ",
+    ),
+    "introduction_diferencia": MessageLookupByLibrary.simpleMessage(
+      "que marquen la diferencia.\nMi experiencia en ",
+    ),
+    "introduction_multiplataforma": MessageLookupByLibrary.simpleMessage(
+      "desarrollo multiplataforma ",
+    ),
+    "introduction_pasion": MessageLookupByLibrary.simpleMessage(
+      "mi pasión es crear ",
+    ),
+    "introduction_soluciones": MessageLookupByLibrary.simpleMessage(
+      "me permite crear soluciones completas. Soy una persona ",
+    ),
+    "occupation": MessageLookupByLibrary.simpleMessage(
+      "Desarrollador de Software",
+    ),
+  };
 }
