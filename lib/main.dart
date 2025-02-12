@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:miporfolio/config/theme/app_theme.dart';
 import 'package:miporfolio/presentation/views/home_view.dart';
+
+import 'generated/l10n.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +16,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: AppLocalizations.delegate.supportedLocales,
+      localeResolutionCallback: (locale, supportedLocales) {
+        // Verifica si el idioma del dispositivo está soportado
+        for (var supportedLocale in supportedLocales) {
+          if (supportedLocale.languageCode == locale?.languageCode) {
+            return locale;
+          }
+        }
+        // Si no está soportado, retorna inglés como idioma por defecto
+        return const Locale('en');
+      },
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: AppTheme().getTheme(),
       home: const HomeView(),
     );
   }
