@@ -15,26 +15,42 @@ class HomeView extends StatelessWidget {
 
           // Fondo base oscuro
           Container(
-            color: const Color(0xFF020617),
+            color: const Color(0xFF020817),
           ),
 
-          // Patrón de cuadrícula
+          // Patrón de puntos hexagonal
           CustomPaint(
-            painter: GridPainter(),
+            painter: HexGridPainter(),
             size: Size.infinite,
           ),
 
-          // Gradiente radial para el efecto de máscara
+          // Gradiente complejo
           Container(
             decoration: BoxDecoration(
               gradient: RadialGradient(
-                center: const Alignment(0.0, -1.0),
-                radius: 1.0,
+                center: const Alignment(0.0, -0.5),
+                radius: 1.5,
                 colors: [
-                  Colors.black.withOpacity(0.7),
+                  const Color(0xFF020817).withOpacity(0.2),
+                  const Color(0xFF020817).withOpacity(0.6),
+                  const Color(0xFF020817).withOpacity(0.9),
+                ],
+                stops: const [0.2, 0.6, 1.0],
+              ),
+            ),
+          ),
+
+          // Capa de brillo superior
+          Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  const Color(0xFF60A5FA).withOpacity(0.1),
                   Colors.transparent,
                 ],
-                stops: const [0.7, 1.0],
+                stops: const [0.0, 0.3],
               ),
             ),
           ),
@@ -50,29 +66,26 @@ class HomeView extends StatelessWidget {
   }
 }
 
-class GridPainter extends CustomPainter {
+class HexGridPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = const Color(0x4F4F4F2E) // Color de las líneas
-      ..strokeWidth = 1;
+      ..color = const Color(0x1A60A5FA)
+      ..strokeWidth = 2;
 
-    // Líneas verticales
-    for (double x = 0; x < size.width; x += 14) {
-      canvas.drawLine(
-        Offset(x, 0),
-        Offset(x, size.height),
-        paint,
-      );
-    }
+    const double spacing = 40; // Espacio entre hexágonos
+    const double radius = 2; // Radio de los puntos
+    bool offset = false;
 
-    // Líneas horizontales
-    for (double y = 0; y < size.height; y += 24) {
-      canvas.drawLine(
-        Offset(0, y),
-        Offset(size.width, y),
-        paint,
-      );
+    for (double y = 0; y < size.height; y += spacing * 0.866) {
+      offset = !offset;
+      for (double x = offset ? spacing/2 : 0; x < size.width; x += spacing) {
+        canvas.drawCircle(
+          Offset(x, y),
+          radius,
+          paint,
+        );
+      }
     }
   }
 
