@@ -21,10 +21,10 @@ class SliverAppBarSection extends StatelessWidget {
       forceElevated: true,
       surfaceTintColor: Colors.transparent,
       scrolledUnderElevation: 0, 
-      actions: [
-        ThemeToggleButton(isDarkMode: true, onChanged: (value) {}),
-        const SizedBox(width: 16),
-        const Padding(
+      actions: const [
+        ThemeToggleButton(),
+        SizedBox(width: 16),
+        Padding(
           padding: EdgeInsets.only(right: 18),
           child: LanguagueSelect(),
         ),

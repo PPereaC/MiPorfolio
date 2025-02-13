@@ -1,31 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../generated/l10n.dart';
+import '../providers/providers.dart';
 
-class ThemeToggleButton extends StatelessWidget {
-  const ThemeToggleButton({
-    super.key,
-    required this.isDarkMode,
-    required this.onChanged,
-  });
+class ThemeToggleButton extends ConsumerWidget {
 
-  final bool isDarkMode;
-  final ValueChanged<bool> onChanged;
+  const ThemeToggleButton({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
 
     final locale = AppLocalizations.of(context);
+    final isDarkMode = ref.watch(themeNotifierProvider).isDarkMode;
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       child: IconButton(
         icon: Icon(
-          isDarkMode ? Icons.light_mode : Icons.dark_mode,
+          isDarkMode ? Icons.dark_mode : Icons.light_mode,
           color: Colors.white,
           size: 24,
         ),
-        onPressed: () => onChanged(!isDarkMode),
+        onPressed: () => ref.read(themeNotifierProvider.notifier).toggleDarkmode(),
         tooltip: isDarkMode ? locale.toggleToLightMode : locale.toggleToDarkMode,
         padding: EdgeInsets.zero,
         constraints: const BoxConstraints(),

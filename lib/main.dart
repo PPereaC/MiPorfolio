@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:miporfolio/config/theme/app_theme.dart';
 import 'package:miporfolio/presentation/views/home_view.dart';
 
 import 'generated/l10n.dart';
+import 'presentation/providers/providers.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
+
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+
+    final appTheme = ref.watch(themeNotifierProvider);
+
     return MaterialApp(
       localizationsDelegates: const [
         AppLocalizations.delegate,
@@ -24,17 +29,19 @@ class MyApp extends StatelessWidget {
       ],
       supportedLocales: AppLocalizations.delegate.supportedLocales,
       localeResolutionCallback: (locale, supportedLocales) {
+
         // Verifica si el idioma del dispositivo está soportado
         for (var supportedLocale in supportedLocales) {
           if (supportedLocale.languageCode == locale?.languageCode) {
             return locale;
           }
         }
-        // Si no está soportado, retorna inglés como idioma por defecto
+
+        // Si no está soportado, devuelve inglés como idioma por defecto
         return const Locale('en');
       },
       debugShowCheckedModeBanner: false,
-      theme: AppTheme().getTheme(),
+      theme: AppTheme(isDarkMode: appTheme.isDarkMode).getTheme(),
       home: const HomeView(),
     );
   }
