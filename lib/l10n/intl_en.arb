@@ -11,5 +11,12 @@
   "introduction_curiosa": "curious and proactive person, ",
   "introduction_buscando": "always looking for ",
   "introduction_desafios": "new challenges ",
-  "introduction_creciendo": "that allow me to continue growing in the world of development."
+  "introduction_creciendo": "that allow me to continue growing in the world of development.",
+  "toggleToDarkMode": "Switch to dark mode",
+  "toggleToLightMode": "Switch to light mode",
+  "homeSection": "Home",
+  "projectsSection": "Projects",
+  "experienceSection": "Experience",
+  "technologiesSection": "Technologies",
+  "trainingSection": "Training"
 }

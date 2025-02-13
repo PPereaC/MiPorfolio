@@ -179,6 +179,71 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Switch to dark mode`
+  String get toggleToDarkMode {
+    return Intl.message(
+      'Switch to dark mode',
+      name: 'toggleToDarkMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Switch to light mode`
+  String get toggleToLightMode {
+    return Intl.message(
+      'Switch to light mode',
+      name: 'toggleToLightMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get homeSection {
+    return Intl.message('Home', name: 'homeSection', desc: '', args: []);
+  }
+
+  /// `Projects`
+  String get projectsSection {
+    return Intl.message(
+      'Projects',
+      name: 'projectsSection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Experience`
+  String get experienceSection {
+    return Intl.message(
+      'Experience',
+      name: 'experienceSection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Technologies`
+  String get technologiesSection {
+    return Intl.message(
+      'Technologies',
+      name: 'technologiesSection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Training`
+  String get trainingSection {
+    return Intl.message(
+      'Training',
+      name: 'trainingSection',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

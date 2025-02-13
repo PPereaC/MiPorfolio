@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../sections/sections.dart';
+import '../sections/sliver_appbar.dart';
 
 class DesktopBody extends StatelessWidget {
   const DesktopBody({super.key});
@@ -12,13 +13,15 @@ class DesktopBody extends StatelessWidget {
 
     return CustomScrollView(
       slivers: [
-        SliverList(
-          delegate: SliverChildListDelegate([
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-              child: const IntroductionSection(),
-            ),
-          ]),
+        // Appbar con las secciones del sitio
+        const SliverAppBarSection(),
+        
+        // Contenido
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+            child: const IntroductionSection(),
+          ),
         ),
       ],
     );

@@ -23,6 +23,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "availableToWork": MessageLookupByLibrary.simpleMessage("Available"),
+    "experienceSection": MessageLookupByLibrary.simpleMessage("Experience"),
+    "homeSection": MessageLookupByLibrary.simpleMessage("Home"),
     "introduction_aplicaciones": MessageLookupByLibrary.simpleMessage(
       "innovative applications ",
     ),
@@ -55,5 +57,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "allows me to create complete solutions. I am a ",
     ),
     "occupation": MessageLookupByLibrary.simpleMessage("Software Developer"),
+    "projectsSection": MessageLookupByLibrary.simpleMessage("Projects"),
+    "technologiesSection": MessageLookupByLibrary.simpleMessage("Technologies"),
+    "toggleToDarkMode": MessageLookupByLibrary.simpleMessage(
+      "Switch to dark mode",
+    ),
+    "toggleToLightMode": MessageLookupByLibrary.simpleMessage(
+      "Switch to light mode",
+    ),
+    "trainingSection": MessageLookupByLibrary.simpleMessage("Training"),
   };
 }
