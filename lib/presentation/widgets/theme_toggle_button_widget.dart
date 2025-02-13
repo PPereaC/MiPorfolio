@@ -19,7 +19,7 @@ class ThemeToggleButton extends ConsumerWidget {
       child: IconButton(
         icon: Icon(
           isDarkMode ? Icons.dark_mode : Icons.light_mode,
-          color: Colors.white,
+          color: isDarkMode ?Colors.white : Colors.black.withOpacity(0.85),
           size: 24,
         ),
         onPressed: () => ref.read(themeNotifierProvider.notifier).toggleDarkmode(),

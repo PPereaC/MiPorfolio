@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../config/utils/constants.dart';
 import '../../generated/l10n.dart';
+import '../providers/providers.dart';
 import '../widgets/widgets.dart';
 
-class IntroductionSection extends StatelessWidget {
+class IntroductionSection extends ConsumerWidget {
   const IntroductionSection({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
 
     final locale = AppLocalizations.of(context);
     final colors = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
+    final isDarkMode = ref.watch(themeNotifierProvider).isDarkMode;
 
     return Center(
       child: SizedBox(
@@ -52,7 +55,7 @@ class IntroductionSection extends StatelessWidget {
                       Text(
                         locale.occupation,
                         style: textTheme.titleSmall!.copyWith(
-                          color: Colors.white.withOpacity(0.85),
+                          color: isDarkMode ? Colors.white.withOpacity(0.85) : Colors.black.withOpacity(0.85),
                           fontWeight: FontWeight.normal
                         )
                       ),

@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../generated/l10n.dart';
+import '../providers/providers.dart';
 import '../widgets/widgets.dart';
 
-class SliverAppBarSection extends StatelessWidget {
+class SliverAppBarSection extends ConsumerWidget {
   const SliverAppBarSection({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
 
     final locale = AppLocalizations.of(context);
+    final isDarkMode = ref.watch(themeNotifierProvider).isDarkMode;
 
     return SliverAppBar(
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      backgroundColor: isDarkMode ? Theme.of(context).scaffoldBackgroundColor : Colors.transparent,
       floating: true,
       pinned: true,
       elevation: 0,
@@ -34,11 +37,31 @@ class SliverAppBarSection extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _NavButton(title: locale.homeSection, onPressed: () {}),
-            _NavButton(title: locale.projectsSection, onPressed: () {}),
-            _NavButton(title: locale.experienceSection, onPressed: () {}),
-            _NavButton(title: locale.technologiesSection, onPressed: () {}),
-            _NavButton(title: locale.trainingSection, onPressed: () {}),
+            _NavButton(
+              title: locale.homeSection,
+              onPressed: () {},
+              isDarkMode: isDarkMode
+            ),
+            _NavButton(
+              title: locale.projectsSection,
+              onPressed: () {},
+              isDarkMode: isDarkMode
+            ),
+            _NavButton(
+              title: locale.experienceSection,
+              onPressed: () {},
+              isDarkMode: isDarkMode
+            ),
+            _NavButton(
+              title: locale.technologiesSection,
+              onPressed: () {},
+              isDarkMode: isDarkMode
+            ),
+            _NavButton(
+              title: locale.trainingSection,
+              onPressed: () {},
+              isDarkMode: isDarkMode
+            ),
           ],
         ),
       ),
@@ -47,13 +70,16 @@ class SliverAppBarSection extends StatelessWidget {
 }
 
 class _NavButton extends StatelessWidget {
+
+  final bool isDarkMode;
+  final String title;
+  final VoidCallback onPressed;
+
   const _NavButton({
     required this.title,
     required this.onPressed,
+    required this.isDarkMode
   });
-
-  final String title;
-  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -63,8 +89,8 @@ class _NavButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           title,
-          style: const TextStyle(
-            color: Colors.white,
+          style: TextStyle(
+            color: isDarkMode ? Colors.white : Colors.black,
             fontSize: 16,
             fontWeight: FontWeight.w500,
           ),

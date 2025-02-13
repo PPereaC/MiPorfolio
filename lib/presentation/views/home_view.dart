@@ -1,26 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../providers/providers.dart';
 import '../responsive/desktop_body.dart';
 import '../responsive/mobile_body.dart';
 import '../responsive/responsive_layout.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends ConsumerWidget {
   const HomeView({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+
+    final isDarkMode = ref.watch(themeNotifierProvider).isDarkMode;
+
     return Scaffold(
       body: Stack(
         children: [
 
-          // Fondo base oscuro
           Container(
-            color: const Color(0xFF020817),
+            color: isDarkMode 
+              ? const Color(0xFF020817)
+              : const Color(0xFFF8FAFC),
           ),
 
           // Patrón de puntos hexagonal
           CustomPaint(
-            painter: HexGridPainter(),
+            painter: HexGridPainter(isDarkMode: isDarkMode),
             size: Size.infinite,
           ),
 
@@ -31,9 +37,12 @@ class HomeView extends StatelessWidget {
                 center: const Alignment(0.0, -0.5),
                 radius: 1.5,
                 colors: [
-                  const Color(0xFF020817).withOpacity(0.2),
-                  const Color(0xFF020817).withOpacity(0.6),
-                  const Color(0xFF020817).withOpacity(0.9),
+                  (isDarkMode ? const Color(0xFF020817) : const Color(0xFFE2E8F0))
+                      .withOpacity(0.2),
+                  (isDarkMode ? const Color(0xFF020817) : const Color(0xFFE2E8F0))
+                      .withOpacity(0.6),
+                  (isDarkMode ? const Color(0xFF020817) : const Color(0xFFE2E8F0))
+                      .withOpacity(0.9),
                 ],
                 stops: const [0.2, 0.6, 1.0],
               ),
@@ -67,10 +76,17 @@ class HomeView extends StatelessWidget {
 }
 
 class HexGridPainter extends CustomPainter {
+
+  final bool isDarkMode;
+
+  HexGridPainter({required this.isDarkMode});
+
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = const Color(0x1A60A5FA)
+      ..color = isDarkMode 
+          ? const Color(0x1A60A5FA)  // Color original para modo oscuro
+          : const Color(0x1A1E40AF)  // Color azul más oscuro para modo claro
       ..strokeWidth = 2;
 
     const double spacing = 40; // Espacio entre hexágonos
