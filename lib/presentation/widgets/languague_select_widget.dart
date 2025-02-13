@@ -1,77 +1,82 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../providers/providers.dart';
 
-class LanguagueSelect extends StatefulWidget {
+class LanguagueSelect extends ConsumerWidget {
   const LanguagueSelect({super.key});
 
   @override
-  State<LanguagueSelect> createState() => _LanguagueSelectState();
-}
-
-class _LanguagueSelectState extends State<LanguagueSelect> {
-  String selectedLanguage = 'ES';
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isDarkMode = ref.watch(themeNotifierProvider).isDarkMode;
+    final currentLocale = ref.watch(languageProvider).languageCode.toUpperCase();
+    
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.white.withOpacity(0.3)),
+        border: Border.all(
+          color: isDarkMode 
+            ? Colors.white.withOpacity(0.3)
+            : Colors.black.withOpacity(0.3)
+        ),
         borderRadius: BorderRadius.circular(4),
       ),
-      child: DropdownButtonHideUnderline(
-        child: DropdownButton<String>(
-          value: selectedLanguage,
-          isDense: true,
-          icon: const Icon(
-            Icons.arrow_drop_down_rounded,
-            color: Colors.white,
-          ),
-          focusColor: Colors.transparent,
-          dropdownColor: Theme.of(context).scaffoldBackgroundColor,
-          // Constructor personalizado para los items seleccionados
-          selectedItemBuilder: (BuildContext context) {
-            return ['ES', 'EN'].map<Widget>((String item) {
-              return Container(
-                alignment: Alignment.centerLeft,
+      child: Theme(
+        data: Theme.of(context).copyWith(
+          hoverColor: Colors.transparent,
+        ),
+        child: DropdownButtonHideUnderline(
+          child: DropdownButton<String>(
+            value: currentLocale,
+            isDense: true,
+            icon: Icon(
+              Icons.arrow_drop_down_rounded,
+              color: isDarkMode ? Colors.white : Colors.black,
+            ),
+            
+            focusColor: Colors.transparent,
+            dropdownColor: Theme.of(context).scaffoldBackgroundColor,
+            selectedItemBuilder: (BuildContext context) {
+              return ['ES', 'EN'].map<Widget>((String item) {
+                return Container(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    item,
+                    style: TextStyle(
+                      color: isDarkMode ? Colors.white : Colors.black,
+                      fontSize: 14,
+                    ),
+                  ),
+                );
+              }).toList();
+            },
+            items: [
+              DropdownMenuItem(
+                value: 'ES',
                 child: Text(
-                  item,
-                  style: const TextStyle(
-                    color: Colors.white,
+                  'ES',
+                  style: TextStyle(
+                    color: isDarkMode ? Colors.white : Colors.black,
                     fontSize: 14,
                   ),
                 ),
-              );
-            }).toList();
-          },
-          items: const [
-            DropdownMenuItem(
-              value: 'ES',
-              child: Text(
-                'ES',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
+              ),
+              DropdownMenuItem(
+                value: 'EN',
+                child: Text(
+                  'EN',
+                  style: TextStyle(
+                    color: isDarkMode ? Colors.white : Colors.black,
+                    fontSize: 14,
+                  ),
                 ),
               ),
-            ),
-            DropdownMenuItem(
-              value: 'EN',
-              child: Text(
-                'EN',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
-                ),
-              ),
-            ),
-          ],
-          onChanged: (String? value) {
-            if (value != null) {
-              setState(() {
-                selectedLanguage = value;
-              });
-            }
-          },
+            ],
+            onChanged: (String? value) {
+              if (value != null) {
+                ref.read(languageProvider.notifier).changeLanguage(value);
+              }
+            },
+          ),
         ),
       ),
     );

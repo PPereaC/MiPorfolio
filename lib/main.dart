@@ -19,6 +19,7 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
 
     final appTheme = ref.watch(themeNotifierProvider);
+    final language = ref.watch(languageProvider);
 
     return MaterialApp(
       localizationsDelegates: const [
@@ -28,18 +29,7 @@ class MyApp extends ConsumerWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.delegate.supportedLocales,
-      localeResolutionCallback: (locale, supportedLocales) {
-
-        // Verifica si el idioma del dispositivo está soportado
-        for (var supportedLocale in supportedLocales) {
-          if (supportedLocale.languageCode == locale?.languageCode) {
-            return locale;
-          }
-        }
-
-        // Si no está soportado, devuelve inglés como idioma por defecto
-        return const Locale('en');
-      },
+      locale: language,
       debugShowCheckedModeBanner: false,
       theme: AppTheme(isDarkMode: appTheme.isDarkMode).getTheme(),
       home: const HomeView(),
