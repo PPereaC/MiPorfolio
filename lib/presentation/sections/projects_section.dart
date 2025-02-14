@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../config/data/projects_data.dart';
 import '../../domain/entities/project.dart';
 import '../../generated/l10n.dart';
+import '../widgets/widgets.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({super.key});
@@ -136,7 +136,7 @@ class _Project extends StatelessWidget {
                   spacing: 8,
                   runSpacing: 8,
                   children: [
-                    ...project.tagLabels.map((label) => _TechnologyTag(label: label)),
+                    ...project.tagLabels.map((label) => TechnologyTag(label: label)),
                   ],
                 ),
       
@@ -147,56 +147,6 @@ class _Project extends StatelessWidget {
               ],
             ),
           ),
-        ],
-      ),
-    );
-  }
-}
-
-// Widget para las etiquetas de tecnologías
-class _TechnologyTag extends StatelessWidget {
-  final String label;
-
-  const _TechnologyTag({
-    required this.label,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-
-    final textTheme = Theme.of(context).textTheme;
-    final colors = Theme.of(context).colorScheme;
-    final rutaIcono = 'svgs/${label.toLowerCase()}.svg';
-
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-      decoration: BoxDecoration(
-        color: colors.surface,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(
-          color: colors.secondary,
-          width: 1.5,
-        ),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-
-          // Icono de la tecnología
-          SvgPicture.asset(
-            rutaIcono,
-            width: 14,
-            height: 14,
-          ),
-
-          const SizedBox(width: 8),
-
-          // Nombre de la tecnología
-          Text(
-            label,
-            style: textTheme.bodySmall
-          ),
-
         ],
       ),
     );
