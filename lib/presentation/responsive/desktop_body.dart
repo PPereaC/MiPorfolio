@@ -10,17 +10,25 @@ class DesktopBody extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final width = MediaQuery.of(context).size.width;
-
+    
     return CustomScrollView(
       slivers: [
         // Appbar con las secciones del sitio
         const SliverAppBarSection(),
         
-        // Contenido
+        // Sección de introducción
         SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.2),
             child: const IntroductionSection(),
+          ),
+        ),
+    
+        // Sección de los proyectos
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+            child: const ProjectsSection(),
           ),
         ),
       ],

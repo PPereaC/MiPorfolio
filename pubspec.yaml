@@ -54,6 +54,7 @@ flutter:
   assets:
     - assets/images/
     - assets/svgs/
+    - assets/projects/
 
   fonts:
     - family: Comfortaa
@@ -62,6 +63,9 @@ flutter:
     - family: Titulo
       fonts:
         - asset: assets/fonts/Mulish-VariableFont_wght.ttf
+    - family: Mono
+      fonts:
+        - asset: assets/fonts/MonomaniacOne-Regular.ttf
 
 flutter_intl:
   enabled: true

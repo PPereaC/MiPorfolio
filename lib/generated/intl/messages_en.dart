@@ -58,6 +58,11 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "occupation": MessageLookupByLibrary.simpleMessage("Software Developer"),
     "projectsSection": MessageLookupByLibrary.simpleMessage("Projects"),
+    "projectsSectionDescription": MessageLookupByLibrary.simpleMessage(
+      "Here you can see some of the projects I have worked on",
+    ),
+    "projectsSectionLabelP1": MessageLookupByLibrary.simpleMessage("My"),
+    "projectsSectionLabelP2": MessageLookupByLibrary.simpleMessage("projects"),
     "technologiesSection": MessageLookupByLibrary.simpleMessage("Technologies"),
     "toggleToDarkMode": MessageLookupByLibrary.simpleMessage(
       "Switch to dark mode",

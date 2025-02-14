@@ -18,5 +18,8 @@
   "projectsSection": "Projects",
   "experienceSection": "Experience",
   "technologiesSection": "Technologies",
-  "trainingSection": "Training"
+  "trainingSection": "Training",
+  "projectsSectionLabelP1": "My",
+  "projectsSectionLabelP2": "projects",
+  "projectsSectionDescription": "Here you can see some of the projects I have worked on"
 }

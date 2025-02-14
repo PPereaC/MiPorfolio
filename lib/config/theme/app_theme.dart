@@ -43,9 +43,9 @@ class AppTheme {
       textTheme: TextTheme(
         titleLarge: TextStyle(
           fontSize: 50,
-          fontWeight: FontWeight.bold,
+          fontWeight: FontWeight.normal,
           color: isDarkMode ? Colors.white : Colors.black,
-          fontFamily: 'Arial',
+          fontFamily: 'Mono',
         ),
         titleMedium: TextStyle(
           fontSize: 32,

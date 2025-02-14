@@ -29,8 +29,8 @@ class _SocialButtonState extends State<SocialButton> {
       child: GestureDetector(
         onTap: widget.onPressed,
         child: Container(
-          width: 48, // Tamaño fijo del botón
-          height: 48, // Tamaño fijo del botón
+          width: 48,
+          height: 48,
           decoration: BoxDecoration(
             color: colors.surface,
             borderRadius: BorderRadius.circular(8),
@@ -39,11 +39,11 @@ class _SocialButtonState extends State<SocialButton> {
               width: 1.5,
             ),
           ),
-          child: Center( // Centramos el SVG
+          child: Center(
             child: SvgPicture.asset(
               widget.icon,
-              width: widget.icon.contains('email') || widget.icon.contains('cv') ? 30 : 24, // Icono más grande
-              height: widget.icon.contains('email') || widget.icon.contains('cv') ? 30 : 24, // Icono más grande
+              width: widget.icon.contains('email') || widget.icon.contains('cv') ? 30 : 24,
+              height: widget.icon.contains('email') || widget.icon.contains('cv') ? 30 : 24,
               colorFilter: ColorFilter.mode(
                 colors.primary,
                 BlendMode.srcIn,

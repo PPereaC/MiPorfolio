@@ -244,6 +244,36 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `My`
+  String get projectsSectionLabelP1 {
+    return Intl.message(
+      'My',
+      name: 'projectsSectionLabelP1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `projects`
+  String get projectsSectionLabelP2 {
+    return Intl.message(
+      'projects',
+      name: 'projectsSectionLabelP2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Here you can see some of the projects I have worked on`
+  String get projectsSectionDescription {
+    return Intl.message(
+      'Here you can see some of the projects I have worked on',
+      name: 'projectsSectionDescription',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

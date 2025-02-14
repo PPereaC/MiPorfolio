@@ -18,7 +18,7 @@ class MyApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
 
-    final appTheme = ref.watch(themeNotifierProvider);
+    final isDarkMode = ref.watch(themeNotifierProvider).isDarkMode;
     final language = ref.watch(languageProvider);
 
     return MaterialApp(
@@ -31,7 +31,7 @@ class MyApp extends ConsumerWidget {
       supportedLocales: AppLocalizations.delegate.supportedLocales,
       locale: language,
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(isDarkMode: appTheme.isDarkMode).getTheme(),
+      theme: AppTheme(isDarkMode: isDarkMode).getTheme(),
       home: const HomeView(),
     );
   }

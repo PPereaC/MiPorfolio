@@ -43,10 +43,8 @@ class IntroductionSection extends ConsumerWidget {
                   
                       // Nombre
                       Text(
-                        'Pablo Perea Campos',
-                        style: textTheme.titleLarge!.copyWith(
-                          fontWeight: FontWeight.bold
-                        )
+                        'Pablo Perea',
+                        style: textTheme.titleLarge
                       ),
                   
                       const SizedBox(height: 8),
