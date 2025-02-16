@@ -274,6 +274,26 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `My`
+  String get experienceSectionLabelP1 {
+    return Intl.message(
+      'My',
+      name: 'experienceSectionLabelP1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `experience`
+  String get experienceSectionLabelP2 {
+    return Intl.message(
+      'experience',
+      name: 'experienceSectionLabelP2',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

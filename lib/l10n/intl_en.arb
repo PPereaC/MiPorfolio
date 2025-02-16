@@ -21,5 +21,7 @@
   "trainingSection": "Training",
   "projectsSectionLabelP1": "My",
   "projectsSectionLabelP2": "projects",
-  "projectsSectionDescription": "Here you can see some of the projects I have worked on"
+  "projectsSectionDescription": "Here you can see some of the projects I have worked on",
+  "experienceSectionLabelP1": "My",
+  "experienceSectionLabelP2": "experience"
 }

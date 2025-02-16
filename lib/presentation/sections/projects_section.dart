@@ -17,48 +17,51 @@ class ProjectsSection extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 32.0),
-      child: Column(
-        children: [
-    
-          // Título sección
-          RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  text: locale.projectsSectionLabelP1,
-                  style: textTheme.titleLarge,
-                ),
-                // Espacio entre las palabras
-                const WidgetSpan(
-                  child: SizedBox(width: 12),
-                ),
-                TextSpan(
-                  text: locale.projectsSectionLabelP2,
-                  style: textTheme.titleLarge?.copyWith(
-                    color: colors.secondary,
+      padding: const EdgeInsets.only(bottom: 250),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 32.0),
+        child: Column(
+          children: [
+      
+            // Título sección
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: locale.projectsSectionLabelP1,
+                    style: textTheme.titleLarge,
                   ),
-                ),
-              ],
+                  // Espacio entre las palabras
+                  const WidgetSpan(
+                    child: SizedBox(width: 12),
+                  ),
+                  TextSpan(
+                    text: locale.projectsSectionLabelP2,
+                    style: textTheme.titleLarge?.copyWith(
+                      color: colors.secondary,
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-
-          const SizedBox(height: 12),
-
-          // Descripción de la sección
-          Text(
-            locale.projectsSectionDescription,
-            style: textTheme.bodyLarge!.copyWith(
-              color: colors.primary
+      
+            const SizedBox(height: 12),
+      
+            // Descripción de la sección
+            Text(
+              locale.projectsSectionDescription,
+              style: textTheme.bodyLarge!.copyWith(
+                color: colors.primary
+              ),
+              textAlign: TextAlign.center,
             ),
-            textAlign: TextAlign.center,
-          ),
-    
-          const SizedBox(height: 40),
-    
-          ...projects.map((project) => _Project(project: project)),
-    
-        ],
+      
+            const SizedBox(height: 40),
+      
+            ...projects.map((project) => _Project(project: project)),
+      
+          ],
+        ),
       ),
     );
   }

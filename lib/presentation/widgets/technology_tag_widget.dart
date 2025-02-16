@@ -14,7 +14,7 @@ class TechnologyTag extends StatelessWidget {
 
     final textTheme = Theme.of(context).textTheme;
     final colors = Theme.of(context).colorScheme;
-    final rutaIcono = 'svgs/${label.toLowerCase()}.svg';
+    final rutaIcono = 'svgs/${label.toLowerCase().replaceAll(' ', '')}.svg';
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
