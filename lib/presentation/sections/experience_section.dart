@@ -43,7 +43,18 @@ class ExperienceSection extends StatelessWidget {
             ),
           ),
 
-          const SizedBox(height: 30),
+          const SizedBox(height: 12),
+      
+          // Descripción de la sección
+          Text(
+            locale.experienceSectionDescription,
+            style: textTheme.bodyLarge!.copyWith(
+              color: colors.primary
+            ),
+            textAlign: TextAlign.center,
+          ),
+
+          const SizedBox(height: 80),
 
           // Lista de trabajos
           ListView.builder(

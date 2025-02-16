@@ -294,6 +294,16 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Here you can see my work experience`
+  String get experienceSectionDescription {
+    return Intl.message(
+      'Here you can see my work experience',
+      name: 'experienceSectionDescription',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
