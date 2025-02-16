@@ -70,6 +70,17 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "projectsSectionLabelP1": MessageLookupByLibrary.simpleMessage("My"),
     "projectsSectionLabelP2": MessageLookupByLibrary.simpleMessage("projects"),
+    "skillsDatabasesTitle": MessageLookupByLibrary.simpleMessage("Databases"),
+    "skillsFrameworksTitle": MessageLookupByLibrary.simpleMessage("Frameworks"),
+    "skillsLanguagesTitle": MessageLookupByLibrary.simpleMessage(
+      "Programming Languages",
+    ),
+    "skillsSectionDescription": MessageLookupByLibrary.simpleMessage(
+      "Technologies, languages, frameworks, tools and databases that I have worked with",
+    ),
+    "skillsSectionLabelP1": MessageLookupByLibrary.simpleMessage("My"),
+    "skillsSectionLabelP2": MessageLookupByLibrary.simpleMessage("skills"),
+    "skillsToolsTitle": MessageLookupByLibrary.simpleMessage("Tools"),
     "technologiesSection": MessageLookupByLibrary.simpleMessage("Technologies"),
     "toggleToDarkMode": MessageLookupByLibrary.simpleMessage(
       "Switch to dark mode",

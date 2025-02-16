@@ -10,6 +10,7 @@ class DesktopBody extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
 
     return CustomScrollView(
       slivers: [
@@ -32,11 +33,27 @@ class DesktopBody extends StatelessWidget {
           ),
         ),
 
+        SliverToBoxAdapter(
+          child: SizedBox(height: height * 0.15),
+        ),
+
         // Sección de la experiencia
         SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.2),
             child: const ExperienceSection(),
+          ),
+        ),
+
+        SliverToBoxAdapter(
+          child: SizedBox(height: height * 0.1),
+        ),
+
+        // Sección de habilidades
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+            child: const SkillsSection(),
           ),
         ),
 

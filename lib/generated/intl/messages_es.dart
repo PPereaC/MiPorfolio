@@ -72,6 +72,17 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "projectsSectionLabelP1": MessageLookupByLibrary.simpleMessage("Mis"),
     "projectsSectionLabelP2": MessageLookupByLibrary.simpleMessage("proyectos"),
+    "skillsDatabasesTitle": MessageLookupByLibrary.simpleMessage(
+      "Bases de Datos",
+    ),
+    "skillsFrameworksTitle": MessageLookupByLibrary.simpleMessage("Frameworks"),
+    "skillsLanguagesTitle": MessageLookupByLibrary.simpleMessage("Lenguajes"),
+    "skillsSectionDescription": MessageLookupByLibrary.simpleMessage(
+      "Tecnologías, lenguajes y herramientas que utilizo",
+    ),
+    "skillsSectionLabelP1": MessageLookupByLibrary.simpleMessage("Mis"),
+    "skillsSectionLabelP2": MessageLookupByLibrary.simpleMessage("habilidades"),
+    "skillsToolsTitle": MessageLookupByLibrary.simpleMessage("Herramientas"),
     "technologiesSection": MessageLookupByLibrary.simpleMessage("Tecnologías"),
     "toggleToDarkMode": MessageLookupByLibrary.simpleMessage(
       "Cambiar a tema oscuro",

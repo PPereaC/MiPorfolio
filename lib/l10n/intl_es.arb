@@ -24,5 +24,12 @@
   "projectsSectionDescription": "Estos son algunos de los proyectos en los que he trabajado",
   "experienceSectionLabelP1": "Experiencia",
   "experienceSectionLabelP2": "laboral",
-  "experienceSectionDescription": "Estas son las empresas en las que he trabajado"
+  "experienceSectionDescription": "Estas son las empresas en las que he trabajado",
+  "skillsSectionLabelP1": "Mis",
+  "skillsSectionLabelP2": "habilidades",
+  "skillsSectionDescription": "Tecnologías, lenguajes y herramientas que utilizo",
+  "skillsLanguagesTitle": "Lenguajes",
+  "skillsFrameworksTitle": "Frameworks",
+  "skillsToolsTitle": "Herramientas",
+  "skillsDatabasesTitle": "Bases de Datos"
 }

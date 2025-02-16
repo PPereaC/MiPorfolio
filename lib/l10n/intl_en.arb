@@ -24,5 +24,12 @@
   "projectsSectionDescription": "Here you can see some of the projects I have worked on",
   "experienceSectionLabelP1": "My",
   "experienceSectionLabelP2": "experience",
-  "experienceSectionDescription": "Here you can see my work experience"
+  "experienceSectionDescription": "Here you can see my work experience",
+  "skillsSectionLabelP1": "My",
+  "skillsSectionLabelP2": "skills",
+  "skillsSectionDescription": "Technologies, languages, frameworks, tools and databases that I have worked with",
+  "skillsLanguagesTitle": "Programming Languages",
+  "skillsFrameworksTitle": "Frameworks",
+  "skillsToolsTitle": "Tools",
+  "skillsDatabasesTitle": "Databases"
 }

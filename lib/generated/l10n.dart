@@ -304,6 +304,66 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `My`
+  String get skillsSectionLabelP1 {
+    return Intl.message('My', name: 'skillsSectionLabelP1', desc: '', args: []);
+  }
+
+  /// `skills`
+  String get skillsSectionLabelP2 {
+    return Intl.message(
+      'skills',
+      name: 'skillsSectionLabelP2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Technologies, languages, frameworks, tools and databases that I have worked with`
+  String get skillsSectionDescription {
+    return Intl.message(
+      'Technologies, languages, frameworks, tools and databases that I have worked with',
+      name: 'skillsSectionDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Programming Languages`
+  String get skillsLanguagesTitle {
+    return Intl.message(
+      'Programming Languages',
+      name: 'skillsLanguagesTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Frameworks`
+  String get skillsFrameworksTitle {
+    return Intl.message(
+      'Frameworks',
+      name: 'skillsFrameworksTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tools`
+  String get skillsToolsTitle {
+    return Intl.message('Tools', name: 'skillsToolsTitle', desc: '', args: []);
+  }
+
+  /// `Databases`
+  String get skillsDatabasesTitle {
+    return Intl.message(
+      'Databases',
+      name: 'skillsDatabasesTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
