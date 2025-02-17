@@ -43,7 +43,7 @@ class IntroductionSection extends ConsumerWidget {
                   
                       // Nombre
                       Text(
-                        'Pablo Perea',
+                        'Pablo Perea Campos',
                         style: textTheme.titleLarge
                       ),
                   
