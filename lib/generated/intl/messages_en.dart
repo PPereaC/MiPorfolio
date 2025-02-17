@@ -31,6 +31,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "experienceSectionLabelP2": MessageLookupByLibrary.simpleMessage(
       "experience",
     ),
+    "footerRightsReserved": MessageLookupByLibrary.simpleMessage(
+      "Almost all rights reserved",
+    ),
     "homeSection": MessageLookupByLibrary.simpleMessage("Home"),
     "introduction_aplicaciones": MessageLookupByLibrary.simpleMessage(
       "innovative applications ",
@@ -63,7 +66,29 @@ class MessageLookup extends MessageLookupByLibrary {
     "introduction_soluciones": MessageLookupByLibrary.simpleMessage(
       "allows me to create complete solutions. I am a ",
     ),
+    "jobDeltanetDescription": MessageLookupByLibrary.simpleMessage(
+      "During the three months of internship, I developed cross-platform applications with Flutter and participated in a web project using PHP/Laravel.\nI implemented custom solutions and worked with RESTful APIs, covering both frontend and backend.",
+    ),
+    "jobSupermarketDescription": MessageLookupByLibrary.simpleMessage(
+      "I developed a desktop application in Flutter for product management, generating labels with barcodes, name, quantity, price, and price per KG/L to optimize organization and sales in the supermarket.",
+    ),
+    "jobVicenteNavasDescription": MessageLookupByLibrary.simpleMessage(
+      "I developed a Flutter application for employees, allowing them to manage and view chiller information, with QR scanning for physical machine data.",
+    ),
+    "madeWithFlutter": MessageLookupByLibrary.simpleMessage(
+      "Made with Flutter",
+    ),
     "occupation": MessageLookupByLibrary.simpleMessage("Software Developer"),
+    "projectCineradarDescription": MessageLookupByLibrary.simpleMessage(
+      "Discover movies and save your favorites in your own personalized collection.",
+    ),
+    "projectFinmusicDescription": MessageLookupByLibrary.simpleMessage(
+      "Cross-platform YouTube Music player. Search and play any song or music video for free.",
+    ),
+    "projectPortfolioDescription": MessageLookupByLibrary.simpleMessage(
+      "Personal portfolio showcasing my projects, skills and development experience.",
+    ),
+    "projectViewButton": MessageLookupByLibrary.simpleMessage("View project"),
     "projectsSection": MessageLookupByLibrary.simpleMessage("Projects"),
     "projectsSectionDescription": MessageLookupByLibrary.simpleMessage(
       "Here you can see some of the projects I have worked on",
@@ -72,9 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "projectsSectionLabelP2": MessageLookupByLibrary.simpleMessage("projects"),
     "skillsDatabasesTitle": MessageLookupByLibrary.simpleMessage("Databases"),
     "skillsFrameworksTitle": MessageLookupByLibrary.simpleMessage("Frameworks"),
-    "skillsLanguagesTitle": MessageLookupByLibrary.simpleMessage(
-      "Programming Languages",
-    ),
+    "skillsLanguagesTitle": MessageLookupByLibrary.simpleMessage("Languages"),
     "skillsSectionDescription": MessageLookupByLibrary.simpleMessage(
       "Technologies, languages, frameworks, tools and databases that I have worked with",
     ),

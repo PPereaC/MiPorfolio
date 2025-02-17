@@ -305,6 +305,36 @@ class AppLocalizations {
     );
   }
 
+  /// `I developed a desktop application in Flutter for product management, generating labels with barcodes, name, quantity, price, and price per KG/L to optimize organization and sales in the supermarket.`
+  String get jobSupermarketDescription {
+    return Intl.message(
+      'I developed a desktop application in Flutter for product management, generating labels with barcodes, name, quantity, price, and price per KG/L to optimize organization and sales in the supermarket.',
+      name: 'jobSupermarketDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I developed a Flutter application for employees, allowing them to manage and view chiller information, with QR scanning for physical machine data.`
+  String get jobVicenteNavasDescription {
+    return Intl.message(
+      'I developed a Flutter application for employees, allowing them to manage and view chiller information, with QR scanning for physical machine data.',
+      name: 'jobVicenteNavasDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `During the three months of internship, I developed cross-platform applications with Flutter and participated in a web project using PHP/Laravel.\nI implemented custom solutions and worked with RESTful APIs, covering both frontend and backend.`
+  String get jobDeltanetDescription {
+    return Intl.message(
+      'During the three months of internship, I developed cross-platform applications with Flutter and participated in a web project using PHP/Laravel.\nI implemented custom solutions and worked with RESTful APIs, covering both frontend and backend.',
+      name: 'jobDeltanetDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `My`
   String get skillsSectionLabelP1 {
     return Intl.message('My', name: 'skillsSectionLabelP1', desc: '', args: []);
@@ -330,10 +360,10 @@ class AppLocalizations {
     );
   }
 
-  /// `Programming Languages`
+  /// `Languages`
   String get skillsLanguagesTitle {
     return Intl.message(
-      'Programming Languages',
+      'Languages',
       name: 'skillsLanguagesTitle',
       desc: '',
       args: [],
@@ -390,6 +420,66 @@ class AppLocalizations {
     return Intl.message(
       'Here you can see my training and certifications',
       name: 'trainingSectionDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discover movies and save your favorites in your own personalized collection.`
+  String get projectCineradarDescription {
+    return Intl.message(
+      'Discover movies and save your favorites in your own personalized collection.',
+      name: 'projectCineradarDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cross-platform YouTube Music player. Search and play any song or music video for free.`
+  String get projectFinmusicDescription {
+    return Intl.message(
+      'Cross-platform YouTube Music player. Search and play any song or music video for free.',
+      name: 'projectFinmusicDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Personal portfolio showcasing my projects, skills and development experience.`
+  String get projectPortfolioDescription {
+    return Intl.message(
+      'Personal portfolio showcasing my projects, skills and development experience.',
+      name: 'projectPortfolioDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `View project`
+  String get projectViewButton {
+    return Intl.message(
+      'View project',
+      name: 'projectViewButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Almost all rights reserved`
+  String get footerRightsReserved {
+    return Intl.message(
+      'Almost all rights reserved',
+      name: 'footerRightsReserved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Made with Flutter`
+  String get madeWithFlutter {
+    return Intl.message(
+      'Made with Flutter',
+      name: 'madeWithFlutter',
       desc: '',
       args: [],
     );

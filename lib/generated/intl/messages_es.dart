@@ -31,6 +31,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Experiencia",
     ),
     "experienceSectionLabelP2": MessageLookupByLibrary.simpleMessage("laboral"),
+    "footerRightsReserved": MessageLookupByLibrary.simpleMessage(
+      "Casi todos los derechos reservados",
+    ),
     "homeSection": MessageLookupByLibrary.simpleMessage("Inicio"),
     "introduction_aplicaciones": MessageLookupByLibrary.simpleMessage(
       "aplicaciones innovadoras ",
@@ -63,9 +66,31 @@ class MessageLookup extends MessageLookupByLibrary {
     "introduction_soluciones": MessageLookupByLibrary.simpleMessage(
       "me permite crear soluciones completas. Soy una persona ",
     ),
+    "jobDeltanetDescription": MessageLookupByLibrary.simpleMessage(
+      "Durante los tres meses de prácticas, desarrollé aplicaciones multiplataforma con Flutter y participé en un proyecto web usando PHP/Laravel.\nImplementé soluciones personalizadas y trabajé con APIs RESTful, abarcando tanto frontend como backend.",
+    ),
+    "jobSupermarketDescription": MessageLookupByLibrary.simpleMessage(
+      "Desarrollé una aplicación de escritorio en Flutter para la gestión de productos, generando etiquetas con códigos de barras, nombre, cantidad, precio, y precio por KG/L para optimizar la organización y venta en el supermercado.",
+    ),
+    "jobVicenteNavasDescription": MessageLookupByLibrary.simpleMessage(
+      "Desarrollé una aplicación en Flutter para empleados, permitiendo gestionar y ver información de enfriadoras, con escaneo de QR para datos de máquinas físicas.",
+    ),
+    "madeWithFlutter": MessageLookupByLibrary.simpleMessage(
+      "Hecho con Flutter",
+    ),
     "occupation": MessageLookupByLibrary.simpleMessage(
       "Desarrollador de Software",
     ),
+    "projectCineradarDescription": MessageLookupByLibrary.simpleMessage(
+      "Descubre películas y guarda tus favoritas en tu propia colección personalizada.",
+    ),
+    "projectFinmusicDescription": MessageLookupByLibrary.simpleMessage(
+      "Reproductor multiplataforma de música de YouTube Music. Busca y reproduce cualquier canción o video musical de forma gratuita.",
+    ),
+    "projectPortfolioDescription": MessageLookupByLibrary.simpleMessage(
+      "Portfolio personal mostrando mis proyectos, habilidades y experiencia en desarrollo.",
+    ),
+    "projectViewButton": MessageLookupByLibrary.simpleMessage("Ver proyecto"),
     "projectsSection": MessageLookupByLibrary.simpleMessage("Proyectos"),
     "projectsSectionDescription": MessageLookupByLibrary.simpleMessage(
       "Estos son algunos de los proyectos en los que he trabajado",

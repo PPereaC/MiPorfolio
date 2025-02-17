@@ -57,7 +57,7 @@ class ProjectsSection extends StatelessWidget {
     
           const SizedBox(height: 40),
     
-          ...projects.map((project) => _Project(project: project)),
+          ...getProjects(locale).map((project) => _Project(project: project)),
     
         ],
       ),
@@ -180,6 +180,7 @@ class _ProjectButtonState extends State<_ProjectButton> {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
+    final locale = AppLocalizations.of(context);
 
     return MouseRegion(
       onEnter: (_) => setState(() => isHovered = true),
@@ -206,9 +207,9 @@ class _ProjectButtonState extends State<_ProjectButton> {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text(
-                'Ver proyecto',
-                style: TextStyle(
+              Text(
+                locale.projectViewButton,
+                style: const TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: 15,
                 ),

@@ -16,6 +16,9 @@ class ExperienceSection extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
     final locale = AppLocalizations.of(context);
 
+    // Obtener la lista de trabajos con las traducciones
+    final jobs = getJobs(locale);
+
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 32),
       child: Column(

@@ -96,7 +96,7 @@ class TrainingSection extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      'CFGS en Desarrollo de Aplicaciones Multiplataforma',
+                      'CFGS Desarrollo de Aplicaciones Multiplataforma',
                       style: textTheme.bodyLarge
                     ),
                     Text(
