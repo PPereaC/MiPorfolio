@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icons_plus/icons_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../config/data/projects_data.dart';
@@ -81,13 +82,22 @@ class _Project extends StatelessWidget {
         children: [
       
           // Imagen del proyecto
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.asset(
-              project.imagePath,
-              width: 380,
-              height: 220,
-              fit: BoxFit.cover,
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(
+                color: colors.primary,
+                width: 1.5,
+              ),
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Image.asset(
+                project.imagePath,
+                width: 380,
+                height: 220,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
       
@@ -205,8 +215,8 @@ class _ProjectButtonState extends State<_ProjectButton> {
               ),
               const SizedBox(width: 8),
               Icon(
-                Icons.arrow_forward,
-                size: 18,
+                Iconsax.export_2_outline,
+                size: 16,
                 color: colors.primary,
               ),
             ],
