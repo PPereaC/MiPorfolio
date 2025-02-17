@@ -31,5 +31,8 @@
   "skillsLanguagesTitle": "Lenguajes",
   "skillsFrameworksTitle": "Frameworks",
   "skillsToolsTitle": "Herramientas",
-  "skillsDatabasesTitle": "Bases de Datos"
+  "skillsDatabasesTitle": "Bases de Datos",
+  "trainingSectionLabelP1": "Mi",
+  "trainingSectionLabelP2": "formación",
+  "trainingSectionDescription": "Esta es mi formación académica y profesional"
 }

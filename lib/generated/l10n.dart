@@ -364,6 +364,36 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `My`
+  String get trainingSectionLabelP1 {
+    return Intl.message(
+      'My',
+      name: 'trainingSectionLabelP1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `training`
+  String get trainingSectionLabelP2 {
+    return Intl.message(
+      'training',
+      name: 'trainingSectionLabelP2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Here you can see my training and certifications`
+  String get trainingSectionDescription {
+    return Intl.message(
+      'Here you can see my training and certifications',
+      name: 'trainingSectionDescription',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {

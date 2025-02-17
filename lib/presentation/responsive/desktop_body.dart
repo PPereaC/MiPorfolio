@@ -57,6 +57,26 @@ class DesktopBody extends StatelessWidget {
           ),
         ),
 
+        // Sección de formación
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+            child: const TrainingSection(),
+          ),
+        ),
+
+        SliverToBoxAdapter(
+          child: SizedBox(height: height * 0.15),
+        ),
+
+        // Sección de footer
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+            child: const FooterSection(),
+          ),
+        ),
+
       ],
     );
   }

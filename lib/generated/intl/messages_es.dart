@@ -91,5 +91,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Cambiar a tema claro",
     ),
     "trainingSection": MessageLookupByLibrary.simpleMessage("Formación"),
+    "trainingSectionDescription": MessageLookupByLibrary.simpleMessage(
+      "Esta es mi formación académica y profesional",
+    ),
+    "trainingSectionLabelP1": MessageLookupByLibrary.simpleMessage("Mi"),
+    "trainingSectionLabelP2": MessageLookupByLibrary.simpleMessage("formación"),
   };
 }

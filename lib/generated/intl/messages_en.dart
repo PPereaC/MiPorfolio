@@ -89,5 +89,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Switch to light mode",
     ),
     "trainingSection": MessageLookupByLibrary.simpleMessage("Training"),
+    "trainingSectionDescription": MessageLookupByLibrary.simpleMessage(
+      "Here you can see my training and certifications",
+    ),
+    "trainingSectionLabelP1": MessageLookupByLibrary.simpleMessage("My"),
+    "trainingSectionLabelP2": MessageLookupByLibrary.simpleMessage("training"),
   };
 }
