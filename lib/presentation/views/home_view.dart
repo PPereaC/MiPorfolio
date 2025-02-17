@@ -11,13 +11,12 @@ class HomeView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-
     final isDarkMode = ref.watch(themeNotifierProvider).isDarkMode;
 
     return Scaffold(
       body: Stack(
         children: [
-
+          // Color de fondo base
           Container(
             color: isDarkMode 
               ? const Color(0xFF020817)
@@ -28,40 +27,6 @@ class HomeView extends ConsumerWidget {
           CustomPaint(
             painter: HexGridPainter(isDarkMode: isDarkMode),
             size: Size.infinite,
-          ),
-
-          // Gradiente complejo
-          Container(
-            decoration: BoxDecoration(
-              gradient: RadialGradient(
-                center: const Alignment(0.0, -0.5),
-                radius: 1.5,
-                colors: [
-                  (isDarkMode ? const Color(0xFF020817) : const Color(0xFFE2E8F0))
-                      .withOpacity(0.2),
-                  (isDarkMode ? const Color(0xFF020817) : const Color(0xFFE2E8F0))
-                      .withOpacity(0.6),
-                  (isDarkMode ? const Color(0xFF020817) : const Color(0xFFE2E8F0))
-                      .withOpacity(0.9),
-                ],
-                stops: const [0.2, 0.6, 1.0],
-              ),
-            ),
-          ),
-
-          // Capa de brillo superior
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  const Color(0xFF60A5FA).withOpacity(0.1),
-                  Colors.transparent,
-                ],
-                stops: const [0.0, 0.3],
-              ),
-            ),
           ),
 
           // Contenido responsive
