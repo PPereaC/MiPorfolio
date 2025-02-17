@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../sections/sections.dart';
+import '../widgets/widgets.dart';
 
 class DesktopBody extends StatelessWidget {
   const DesktopBody({super.key});
@@ -11,67 +12,81 @@ class DesktopBody extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
 
-    return CustomScrollView(
-      slivers: [
+    return Stack(
+      children: [
+
+        // Secciones
+        CustomScrollView(
+          slivers: [
+            
+            // Sección de introducción
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+                child: const IntroductionSection(),
+              ),
+            ),
         
-        // Sección de introducción
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-            child: const IntroductionSection(),
-          ),
-        ),
-    
-        // Sección de los proyectos
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-            child: const ProjectsSection(),
-          ),
+            // Sección de los proyectos
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+                child: const ProjectsSection(),
+              ),
+            ),
+        
+            SliverToBoxAdapter(
+              child: SizedBox(height: height * 0.15),
+            ),
+        
+            // Sección de la experiencia
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+                child: const ExperienceSection(),
+              ),
+            ),
+        
+            SliverToBoxAdapter(
+              child: SizedBox(height: height * 0.1),
+            ),
+        
+            // Sección de habilidades
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+                child: const SkillsSection(),
+              ),
+            ),
+        
+            // Sección de formación
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+                child: const TrainingSection(),
+              ),
+            ),
+        
+            SliverToBoxAdapter(
+              child: SizedBox(height: height * 0.15),
+            ),
+        
+            // Sección de footer
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+                child: const FooterSection(),
+              ),
+            ),
+        
+          ],
         ),
 
-        SliverToBoxAdapter(
-          child: SizedBox(height: height * 0.15),
-        ),
-
-        // Sección de la experiencia
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-            child: const ExperienceSection(),
-          ),
-        ),
-
-        SliverToBoxAdapter(
-          child: SizedBox(height: height * 0.1),
-        ),
-
-        // Sección de habilidades
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-            child: const SkillsSection(),
-          ),
-        ),
-
-        // Sección de formación
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-            child: const TrainingSection(),
-          ),
-        ),
-
-        SliverToBoxAdapter(
-          child: SizedBox(height: height * 0.15),
-        ),
-
-        // Sección de footer
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-            child: const FooterSection(),
-          ),
+        // Selector de idioma flotante
+        const Positioned(
+          top: 20,
+          right: 20,
+          child: LanguagueSelect(),
         ),
 
       ],
