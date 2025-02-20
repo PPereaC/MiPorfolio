@@ -1,16 +1,19 @@
-# miporfolio
+# Porfolio
+Portfolio personal mostrando mis proyectos, habilidades y experiencia en desarrollo.
 
-A new Flutter project.
+## 📷 Capturas de pantalla
+<div align="left">
+  <img src="https://i.imgur.com/mmBG4WM.png" width="35%" />
+</div>
 
-## Getting Started
+## 📘 Paquetes utilizados
+* auto_size_text: ^3.0.0 - Texto Adaptativo según el tamaño de la pantalla.
+* flutter_localizations, intl - Control de idiomas en la web.
+* flutter_riverpod: ^2.6.1 - Gestor de estado.
+* icons_plus: ^5.0.0 - Iconos.
+* flutter_svg: ^2.0.16 - Mostrar SVGs en la web.
+* url_launcher: ^6.3.1 - Navegación a URLs.
 
-This project is a starting point for a Flutter application.
+## 🔗 Link
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<a href="https://ppereac.netlify.app/">Mi Porfolio</a>

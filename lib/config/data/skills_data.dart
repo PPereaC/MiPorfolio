@@ -15,8 +15,6 @@ List<Skill> get skills => [
   _createSkill('Java', SkillType.language),
   _createSkill('C Sharp', SkillType.language),
   _createSkill('JavaScript', SkillType.language),
-  _createSkill('HTML', SkillType.language),
-  _createSkill('CSS', SkillType.language),
   
   // Frameworks
   _createSkill('Flutter', SkillType.framework),
@@ -33,4 +31,8 @@ List<Skill> get skills => [
   _createSkill('Firebase', SkillType.database),
   _createSkill('Isar Database', SkillType.database),
   _createSkill('SQLite', SkillType.database),
+  
+  // Otras tecnologías
+  _createSkill('HTML', SkillType.others),
+  _createSkill('CSS', SkillType.others),
 ];
