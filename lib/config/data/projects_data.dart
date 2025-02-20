@@ -17,10 +17,10 @@ List<Project> getProjects(AppLocalizations l10n) => [
     repositoryUrl: 'https://github.com/PPereaC/FinMusic'
   ),
   Project(
-    title: 'Porfolio',
+    title: 'MiPorfolio',
     description: l10n.projectPortfolioDescription,
     imagePath: 'assets/projects/porfolio.jpeg',
     tagLabels: ['Flutter', 'Dart'],
-    repositoryUrl: 'https://github.com/PPereaC/porfolio'
+    repositoryUrl: 'https://github.com/PPereaC/MiPorfolio'
   ),
 ];
