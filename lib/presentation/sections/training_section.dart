@@ -1,8 +1,10 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../config/data/certifications_data.dart';
+import '../../config/utils/device_info.dart';
 import '../../domain/entities/certification.dart';
 import '../../generated/l10n.dart';
 
@@ -14,6 +16,7 @@ class TrainingSection extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     final colors = Theme.of(context).colorScheme;
     final locale = AppLocalizations.of(context);
+    final isMobile = DeviceInfo(context).isMobile;
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 32),
@@ -57,7 +60,7 @@ class TrainingSection extends StatelessWidget {
           const SizedBox(height: 48),
 
           // Certificaciones
-          _buildCertificationsGrid(context),
+          _buildCertificationsGrid(context, isMobile),
         ],
       ),
     );
@@ -66,37 +69,65 @@ class TrainingSection extends StatelessWidget {
   Widget _buildEducationCard(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
+    final isMobile = DeviceInfo(context).isMobile;
   
     return Align(
       alignment: Alignment.center,
-      child: IntrinsicWidth(
-        child: Container(
-          padding: const EdgeInsets.all(12),
-          decoration: BoxDecoration(
-            color: colors.surface,
-            borderRadius: BorderRadius.circular(6),
-            border: Border.all(
-              color: colors.primary,
-              width: 1.5,
-            ),
+      child: Container(
+        padding: EdgeInsets.all(isMobile ? 16 : 20),
+        decoration: BoxDecoration(
+          color: colors.surface,
+          borderRadius: BorderRadius.circular(6),
+          border: Border.all(
+            color: colors.primary,
+            width: 1.5,
           ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(
-                Icons.school_outlined,
-                size: 34,
-                color: colors.primary,
-              ),
-              const SizedBox(width: 12),
-              Padding(
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(
+              Icons.school_outlined,
+              size: isMobile ? 28 : 34,
+              color: colors.primary,
+            ),
+            SizedBox(width: isMobile ? 8 : 12),
+            
+            isMobile 
+              ? Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      AutoSizeText(
+                        'CFGS - Desarrollo de Aplicaciones Multiplataforma',
+                        style: textTheme.bodyLarge,
+                        minFontSize: 12,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      const SizedBox(height: 4),
+                      AutoSizeText(
+                        'IES Gregorio Prieto',
+                        style: textTheme.bodyMedium?.copyWith(
+                          color: colors.primary
+                        ),
+                        minFontSize: 12,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
+                  ),
+                )
+              : Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 5),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      'CFGS Desarrollo de Aplicaciones Multiplataforma',
+                      'CFGS - Desarrollo de Aplicaciones Multiplataforma',
                       style: textTheme.bodyLarge
                     ),
                     Text(
@@ -108,14 +139,14 @@ class TrainingSection extends StatelessWidget {
                   ],
                 ),
               ),
-            ],
-          ),
+
+          ],
         ),
       ),
     );
   }
 
-  Widget _buildCertificationsGrid(BuildContext context) {
+  Widget _buildCertificationsGrid(BuildContext context, bool isMobile) {
     // Calculamos cuántas columnas queremos basándonos en el ancho de la pantalla
     final screenWidth = MediaQuery.of(context).size.width;
     // Ancho deseado para cada tarjeta
@@ -127,7 +158,7 @@ class TrainingSection extends StatelessWidget {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: crossAxisCount,
+        crossAxisCount: isMobile ? 1 : crossAxisCount,
         childAspectRatio: 16 / 10,
         crossAxisSpacing: 16,
         mainAxisSpacing: 16,

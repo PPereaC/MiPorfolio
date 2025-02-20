@@ -98,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "skillsDatabasesTitle": MessageLookupByLibrary.simpleMessage("Databases"),
     "skillsFrameworksTitle": MessageLookupByLibrary.simpleMessage("Frameworks"),
     "skillsLanguagesTitle": MessageLookupByLibrary.simpleMessage("Languages"),
+    "skillsOthersTitle": MessageLookupByLibrary.simpleMessage("Others"),
     "skillsSectionDescription": MessageLookupByLibrary.simpleMessage(
       "Technologies, languages, frameworks, tools and databases that I have worked with",
     ),
