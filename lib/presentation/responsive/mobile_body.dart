@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../sections/sections.dart';
-import '../widgets/widgets.dart';
 
 class MobileBody extends StatelessWidget {
   const MobileBody({super.key});
@@ -26,14 +25,18 @@ class MobileBody extends StatelessWidget {
                 child: const IntroductionSection(),
               ),
             ),
+
+            SliverToBoxAdapter(
+              child: SizedBox(height: height * 0.1),
+            ),
         
-            // // Sección de los proyectos
-            // SliverToBoxAdapter(
-            //   child: Padding(
-            //     padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-            //     child: const ProjectsSection(),
-            //   ),
-            // ),
+            // Sección de los proyectos
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: width * 0.1),
+                child: const ProjectsSection(),
+              ),
+            ),
         
             // SliverToBoxAdapter(
             //   child: SizedBox(height: height * 0.15),
