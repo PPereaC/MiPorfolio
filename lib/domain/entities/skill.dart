@@ -14,5 +14,6 @@ enum SkillType {
   language,
   framework,
   tool,
-  database
+  database,
+  others
 }

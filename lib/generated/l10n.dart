@@ -395,6 +395,16 @@ class AppLocalizations {
     );
   }
 
+  /// `Others`
+  String get skillsOthersTitle {
+    return Intl.message(
+      'Others',
+      name: 'skillsOthersTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `My`
   String get trainingSectionLabelP1 {
     return Intl.message(

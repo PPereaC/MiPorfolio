@@ -47,17 +47,14 @@ class MobileBody extends StatelessWidget {
               child: ExperienceSection(),
             ),
         
-            // SliverToBoxAdapter(
-            //   child: SizedBox(height: height * 0.1),
-            // ),
+            SliverToBoxAdapter(
+              child: SizedBox(height: height * 0.1),
+            ),
         
-            // // Sección de habilidades
-            // SliverToBoxAdapter(
-            //   child: Padding(
-            //     padding: EdgeInsets.symmetric(horizontal: width * 0.2),
-            //     child: const SkillsSection(),
-            //   ),
-            // ),
+            // Sección de habilidades
+            const SliverToBoxAdapter(
+              child: SkillsSection(),
+            ),
         
             // // Sección de formación
             // SliverToBoxAdapter(
