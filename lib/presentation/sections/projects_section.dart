@@ -29,49 +29,46 @@ class ProjectsSection extends StatelessWidget {
 }
 
 Widget _mobileBuild(BuildContext context, ColorScheme colors, TextTheme textTheme, AppLocalizations locale) {
-  return Container(
-    padding: const EdgeInsets.symmetric(vertical: 32.0),
-    child: Column(
-      children: [
-  
-        // Título sección
-        RichText(
-          textAlign: TextAlign.center,
-          text: TextSpan(
-            children: [
-              TextSpan(
-                text: locale.projectsSectionLabelP1,
-                style: textTheme.titleLarge,
+  return Column(
+    children: [
+    
+      // Título sección
+      RichText(
+        textAlign: TextAlign.center,
+        text: TextSpan(
+          children: [
+            TextSpan(
+              text: locale.projectsSectionLabelP1,
+              style: textTheme.titleLarge,
+            ),
+            // Espacio entre las palabras
+            const WidgetSpan(
+              child: SizedBox(width: 12),
+            ),
+            TextSpan(
+              text: locale.projectsSectionLabelP2,
+              style: textTheme.titleLarge?.copyWith(
+                color: colors.secondary,
               ),
-              // Espacio entre las palabras
-              const WidgetSpan(
-                child: SizedBox(width: 12),
-              ),
-              TextSpan(
-                text: locale.projectsSectionLabelP2,
-                style: textTheme.titleLarge?.copyWith(
-                  color: colors.secondary,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
-  
-        const SizedBox(height: 24),
-  
-        // Descripción de la sección
-        Text(
-          locale.projectsSectionDescription,
-          style: textTheme.bodyLarge!.copyWith(
-            color: colors.primary
-          ),
-          textAlign: TextAlign.center,
+      ),
+    
+      const SizedBox(height: 24),
+    
+      // Descripción de la sección
+      Text(
+        locale.projectsSectionDescription,
+        style: textTheme.bodyLarge!.copyWith(
+          color: colors.primary
         ),
-  
-        ...getProjects(locale).map((project) => _Project(project: project, isMobile: true)),
-  
-      ],
-    ),
+        textAlign: TextAlign.center,
+      ),
+    
+      ...getProjects(locale).map((project) => _Project(project: project, isMobile: true)),
+    
+    ],
   );
 }
 
